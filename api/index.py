@@ -41,5 +41,6 @@ def speech_request():
         raise BadRequest("Please provide a prompt")
     speech = generate_speech_wav(prompt)
     buffer = io.BytesIO()
-    soundfile.write(buffer, speech.numpy(), format='WAV', subtype='PCM_16', samplerate=16000)
-    return send_file(buffer, mimetype='audio/wav', download_name='speech.wav')
+    soundfile.write(buffer, speech.numpy(), format='WAV', samplerate=16000)
+    buffer.seek(0)
+    return send_file(buffer, mimetype='audio/wav', download_name='speech.wav', as_attachment=True)
