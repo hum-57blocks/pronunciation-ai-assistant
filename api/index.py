@@ -27,7 +27,7 @@ def completion_api():
     return Response(stream(messages), mimetype='text/event-stream')
 
 
-@app.route('/speech', methods=['GET'])
+@app.route('/', methods=['GET'])
 def speech_api():
     prompt = request.args.get('prompt')
     response = client.audio.speech.create(
