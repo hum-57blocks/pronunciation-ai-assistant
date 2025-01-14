@@ -1,28 +1,55 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# Pronunciation AI Assistant
 
-# Flask + Vercel
-
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+Working at 57Blocks, it is extremely important to improve oral and speaking skills. This is not just for work purposes; it also matters for personal development. We have many opportunities to read English papers, emails, or articles on a daily basis. Sometimes we forget how to pronounce certain English words or phrases. Now,  simply you just need to highlight the text with your mouse, and the sounds will automatically play.
 
 ## Demo
 
-https://flask-python-template.vercel.app/
+<video src="/docs/example.mp4"></video>
+![](/docs/example.mp4)
 
 ## How it Works
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
+### Running AI Service
 
-## Running Locally
+#### Install Python Dependencies
 
 ```bash
-npm i -g vercel
-vercel dev
+pip install -r requirements.txt
 ```
 
-Your Flask application is now available at `http://localhost:3000`.
+#### Run Flask application
 
-## One-Click Deploy
+```bash
+python api/index.py
+```
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+Your AI service is now available at `http://localhost:5000`.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+### Setting Up Ngrok for HTTPS Access
+
+#### Install Ngrok
+
+Download and install Ngrok from https://download.ngrok.com.
+
+#### Start Ngrok
+
+```bash
+ngrok http 5000
+```
+
+Ngrok will provide a forwarding URL, something like https://<your-ngrok-id>.ngrok.io. Use this HTTPS URL to access your AI service.
+
+### Installing Chrome Extension
+
+1. Open Chrome and navigate to chrome://extensions.
+2. Enable Developer mode in the top right corner.
+3. Click Load unpacked.
+4. Select `chrome-extension` folder.
+
+### Setting Chrome Extension AI server address
+
+#### Click Chrome Extension on the right corner.
+![screenshot1.png](/docs/screenshot1.png)
+
+#### Enter AI server address and save
+![screenshot2.png](/docs/screenshot2.png)
