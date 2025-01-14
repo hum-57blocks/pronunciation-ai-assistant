@@ -4,8 +4,7 @@ Working at 57Blocks, it is extremely important to improve oral and speaking skil
 
 ## Demo
 
-<video src="/docs/example.mp4"></video>
-![](/docs/example.mp4)
+[![example-thumb.png](/docs/example-thumb.png)](/docs/example.mp4)
 
 ## How it Works
 
