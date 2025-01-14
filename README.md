@@ -36,11 +36,11 @@ Download and install Ngrok from https://download.ngrok.com.
 ngrok http 5000
 ```
 
-Ngrok will provide a forwarding URL, something like https://<your-ngrok-id>.ngrok.io. Use this HTTPS URL to access your AI service.
+Ngrok will provide a forwarding URL, something like `https://<your-ngrok-id>.ngrok.io`. Use this HTTPS URL to access your AI service.
 
 ### Installing Chrome Extension
 
-1. Open Chrome and navigate to chrome://extensions.
+1. Open Chrome and navigate to [chrome://extensions](chrome://extensions).
 2. Enable Developer mode in the top right corner.
 3. Click Load unpacked.
 4. Select `chrome-extension` folder.
